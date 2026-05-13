@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>404 – Page Not Found | Alex Gomes</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.css">
+  <style>
+    :root {
+      --bg: #0f172a;
+      --accent: #00d4ff;
+      --text: #e2e8f0;
+      --subtle: #94a3b8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    /* Canvas background */
+    #canvas404 { position: fixed; inset: 0; z-index: 0; }
+
+    .container-404 {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    /* Glitch 404 */
+    .glitch {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: clamp(6rem, 20vw, 14rem);
+      font-weight: 500;
+      color: var(--accent);
+      position: relative;
+      line-height: 1;
+      animation: flicker 3s infinite;
+      filter: drop-shadow(0 0 30px var(--accent));
+    }
+    .glitch::before,
+    .glitch::after {
+      content: '404';
+      position: absolute;
+      inset: 0;
+    }
+    .glitch::before {
+      color: #ff007a;
+      animation: glitchTop 2.5s infinite;
+      clip-path: polygon(0 0, 100% 0, 100% 40%, 0 40%);
+    }
+    .glitch::after {
+      color: #00ff9f;
+      animation: glitchBot 2.5s infinite;
+      clip-path: polygon(0 60%, 100% 60%, 100% 100%, 0 100%);
+    }
+    @keyframes glitchTop {
+      0%, 90%, 100% { transform: translate(0); }
+      92%           { transform: translate(-4px, -2px); }
+      94%           { transform: translate(4px, 2px); }
+      96%           { transform: translate(-2px, 0); }
+    }
+    @keyframes glitchBot {
+      0%, 90%, 100% { transform: translate(0); }
+      92%           { transform: translate(4px, 2px); }
+      94%           { transform: translate(-4px, -2px); }
+      96%           { transform: translate(2px, 0); }
+    }
+    @keyframes flicker {
+      0%, 95%, 100% { opacity: 1; }
+      96%           { opacity: 0.6; }
+      97%           { opacity: 1; }
+      98%           { opacity: 0.4; }
+    }
+
+    .msg {
+      font-size: clamp(1rem, 3vw, 1.4rem);
+      color: var(--subtle);
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    .msg span {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--accent);
+    }
+
+    .sub {
+      font-size: 0.95rem;
+      color: var(--subtle);
+      margin-bottom: 2.5rem;
+    }
+
+    /* Buttons */
+    .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+    .btn-glow {
+      background: transparent;
+      border: 2px solid var(--accent);
+      color: var(--accent);
+      padding: 0.65rem 1.8rem;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .btn-glow:hover {
+      background: var(--accent);
+      color: var(--bg);
+      box-shadow: 0 0 20px var(--accent);
+      transform: translateY(-2px);
+    }
+    .btn-ghost {
+      border-color: var(--subtle);
+      color: var(--subtle);
+    }
+    .btn-ghost:hover {
+      background: var(--subtle);
+      color: var(--bg);
+      box-shadow: none;
+    }
+
+    /* Countdown */
+    .redirect-note {
+      margin-top: 2.5rem;
+      font-size: 0.82rem;
+      color: var(--subtle);
+    }
+    .redirect-note span {
+      color: var(--accent);
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+<canvas id="canvas404"></canvas>
+
+<div class="container-404">
+  <div class="glitch">404</div>
+  <p class="msg">Oops! <span>Page not found.</span></p>
+  <p class="sub">Looks like this page got lost in the void.</p>
+
+  <div class="btn-row">
+    <a href="index.html" class="btn-glow">
+      <i class="bi bi-house-fill"></i> Back to Home
+    </a>
+    <a href="index.html#projects" class="btn-glow btn-ghost">
+      <i class="bi bi-code-slash"></i> View Projects
+    </a>
+  </div>
+
+  <p class="redirect-note">
+    Auto-redirecting in <span id="countdown">10</span>s
+  </p>
+</div>
+
+<script>
+  /* --- PARTICLE BACKGROUND (same as portfolio) --- */
+  const canvas = document.getElementById('canvas404');
+  const ctx = canvas.getContext('2d');
+  let w = canvas.width = innerWidth;
+  let h = canvas.height = innerHeight;
+  addEventListener('resize', () => { w = canvas.width = innerWidth; h = canvas.height = innerHeight; });
+
+  const nodes = Array.from({length: 60}, () => ({
+    x: Math.random()*w, y: Math.random()*h,
+    vx: (Math.random()-0.5)*0.4, vy: (Math.random()-0.5)*0.4,
+    size: Math.random()*2+1
+  }));
+
+  function draw() {
+    ctx.clearRect(0,0,w,h);
+    ctx.fillStyle = '#00d4ff';
+    nodes.forEach((n,i) => {
+      n.x += n.vx; n.y += n.vy;
+      if (n.x<0||n.x>w) n.vx*=-1;
+      if (n.y<0||n.y>h) n.vy*=-1;
+      ctx.globalAlpha = 0.5;
+      ctx.beginPath(); ctx.arc(n.x,n.y,n.size,0,Math.PI*2); ctx.fill();
+      nodes.slice(i+1).forEach(n2 => {
+        const dx=n.x-n2.x, dy=n.y-n2.y, dist=Math.sqrt(dx*dx+dy*dy);
+        if (dist<120) {
+          ctx.globalAlpha=(120-dist)/120*0.15;
+          ctx.strokeStyle='#00d4ff'; ctx.lineWidth=1;
+          ctx.beginPath(); ctx.moveTo(n.x,n.y); ctx.lineTo(n2.x,n2.y); ctx.stroke();
+        }
+      });
+    });
+    requestAnimationFrame(draw);
+  }
+  draw();
+
+  /* --- AUTO REDIRECT COUNTDOWN --- */
+  let count = 10;
+  const countEl = document.getElementById('countdown');
+  const timer = setInterval(() => {
+    count--;
+    countEl.textContent = count;
+    if (count <= 0) {
+      clearInterval(timer);
+      window.location.href = 'index.html';
+    }
+  }, 1000);
+</script>
+</body>
+</html>
