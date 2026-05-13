@@ -9,7 +9,7 @@ This project showcases my professional background, technical skills, projects, a
 
 ## Desktop View
 
-![Portfolio Preview](Image/project-preview.png)
+![Portfolio Preview](image\ss1.png)
 
 > Replace `image\ss1.png` with your actual project screenshot.
 
