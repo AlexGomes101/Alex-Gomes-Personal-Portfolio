@@ -7,11 +7,9 @@ This project showcases my professional background, technical skills, projects, a
 ---
 
 # 📸 Portfolio Preview
-
-<p align="center">
+##Dark Mode
   <img src="https://github.com/user-attachments/assets/9d8e724b-0ad2-4c46-ae5e-cd97ee87da7a" 
-    alt="Alex Gomes Portfolio Preview">
-</p>
+  
 
 ---
 
