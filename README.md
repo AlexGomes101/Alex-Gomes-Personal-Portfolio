@@ -1,3 +1,4 @@
+<img width="1901" height="981" alt="ss1" src="https://github.com/user-attachments/assets/9d8e724b-0ad2-4c46-ae5e-cd97ee87da7a" />
 # 🌐 Alex Gomes – Personal Portfolio
 
 Welcome to my personal portfolio website repository.
@@ -9,7 +10,7 @@ This project showcases my professional background, technical skills, projects, a
 # 📸 Portfolio Preview
 
 <p align="center">
-  <img src="E:\AlexImpDoc\portfolio\image\ss1.png" alt="Alex Gomes Portfolio Preview">
+  <img src="https://github.com/user-attachments/assets/9d8e724b-0ad2-4c46-ae5e-cd97ee87da7a" alt="Alex Gomes Portfolio Preview">
 </p>
 
 ---
