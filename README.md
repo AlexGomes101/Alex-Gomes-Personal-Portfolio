@@ -1,5 +1,6 @@
 # 🌐 Alex Gomes – Personal Portfolio
 
+Welcome to my personal portfolio website repository.
 
 This project showcases my professional background, technical skills, projects, and passion for modern web development through a clean, responsive, and interactive portfolio website.
 
@@ -7,11 +8,9 @@ This project showcases my professional background, technical skills, projects, a
 
 # 📸 Portfolio Preview
 
-## Desktop View
-
-![Portfolio Preview](image\ss1.png)
-
-> Replace `image\ss1.png` with your actual project screenshot.
+<p align="center">
+  <img src="./image\ss1.png"" alt="Alex Gomes Portfolio Preview">
+</p>
 
 ---
 
@@ -26,17 +25,7 @@ This project showcases my professional background, technical skills, projects, a
 
 # 📌 About The Project
 
-This portfolio website was developed to establish a professional online presence and present my work in a visually appealing and user-friendly format.
-
-The project focuses on:
-
-- Responsive web design
-- Smooth user experience
-- Clean modern interface
-- Mobile compatibility
-- Interactive web elements
-
-It serves as a central platform where visitors can explore my projects, skills, resume, and contact information.
+Alex Gomes – Personal Portfolio is a modern and responsive website developed using HTML5, CSS3, and JavaScript to showcase my skills, projects, and professional background. The portfolio features a clean interface, responsive layout, and smooth user experience across desktop and mobile devices.
 
 ---
 
@@ -120,38 +109,6 @@ This project can be deployed easily using:
 - GitHub Pages
 - Netlify
 - Vercel
-
----
-
-# 📸 How To Add Project Screenshot
-
-## Step 1
-
-Take a screenshot of your portfolio homepage.
-
----
-
-## Step 2
-
-Save the image inside the `Image` folder.
-
-Example:
-
-```bash
-Image/project-preview.png
-```
-
----
-
-## Step 3
-
-Keep this line in your README file:
-
-```markdown
-![Portfolio Preview](Image/project-preview.png)
-```
-
-GitHub will automatically display your project image.
 
 ---
 
