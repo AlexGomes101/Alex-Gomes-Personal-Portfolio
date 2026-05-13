@@ -9,7 +9,7 @@ This project showcases my professional background, technical skills, projects, a
 # 📸 Portfolio Preview
 
 <p align="center">
-  <img src="image\ss1.png" alt="Alex Gomes Portfolio Preview">
+  <img src=""E:\AlexImpDoc\portfolio\image\ss1.png"" alt="Alex Gomes Portfolio Preview">
 </p>
 
 ---
