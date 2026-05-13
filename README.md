@@ -7,9 +7,26 @@ This project showcases my professional background, technical skills, projects, a
 ---
 
 # 📸 Portfolio Preview
-##Dark Mode
-  <img src="https://github.com/user-attachments/assets/9d8e724b-0ad2-4c46-ae5e-cd97ee87da7a" 
-  
+## Dark Mode
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/9d8e724b-0ad2-4c46-ae5e-cd97ee87da7a" alt="Alex Gomes Portfolio Preview">
+</p>
+
+## Light Mode
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/654c7948-1585-4358-a831-d4f39e013fc5" alt="Alex Gomes Portfolio Preview">
+</p>
+
+## About Me
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/9a81b458-8fe8-4539-9e0d-885871bc8671" alt="Alex Gomes Portfolio Preview">
+</p>
+
+## Featured Project
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/1fb09018-6fe4-46d9-a77c-9ba7fc35886f" alt="Alex Gomes Portfolio Preview">
+</p>
+
 
 ---
 
@@ -18,7 +35,7 @@ This project showcases my professional background, technical skills, projects, a
 🔗 **Visit Portfolio Website**  
 [Click Here to Visit](#)
 
-> *(Add your deployed website link after publishing on GitHub Pages or Netlify.)*
+> *(https://alexgomesportfolio.netlify.app/)*
 
 ---
 
@@ -46,8 +63,7 @@ The following technologies were used in this project:
 ✔️ Modern User Interface  
 ✔️ Smooth Navigation  
 ✔️ Interactive JavaScript Effects  
-✔️ Project Showcase Section  
-✔️ About Me Section  
+✔️ Project Showcase Section   
 ✔️ Resume Download Option  
 ✔️ Contact Information Section  
 ✔️ Mobile-Friendly Layout  
@@ -58,19 +74,21 @@ The following technologies were used in this project:
 # 📂 Project Structure
 
 ```bash
-PortfolioIndex/
+Portfolio/
+│
+├── docs/
+│   └── AlexGomesResume.pdf
 │
 ├── Image/
-│   ├── profile.jpg
-│   ├── project-preview.png
-│   └── other-images
+│   └── project-preview.png
 │
-├── AlexGomesResume.pdf
-├── index.html
-├── style.css
-├── script.js
-├── favicon.ico
-└── README.md
+├── index/
+│   ├── index.html
+│   ├── style.css
+│   ├── script.js
+│   └── README.md
+│
+└── 404/
 ```
 
 ---
@@ -107,7 +125,6 @@ This project can be deployed easily using:
 
 - GitHub Pages
 - Netlify
-- Vercel
 
 ---
 
@@ -123,7 +140,6 @@ Passionate about creating responsive and modern web experiences.
 
 - GitHub: https://github.com/alexgomes101
 - Email: alexgomes.augustinee@gmail.com
-- LinkedIn: Add your LinkedIn profile here
 
 ---
 
@@ -138,18 +154,3 @@ This project is open-source and available for learning, inspiration, and persona
 If you like this project, feel free to give it a ⭐ on GitHub.
 
 ---
-
-# 📈 Future Improvements
-
-- Dark/Light Mode
-- Advanced Animations
-- Contact Form Integration
-- More Project Sections
-- SEO Optimization
-- Performance Enhancements
-
----
-
-# 🙌 Acknowledgements
-
-Special thanks to all technologies and tools that helped build this project.
